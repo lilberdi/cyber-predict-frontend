@@ -1,0 +1,15 @@
+{
+  "name": "Cyber Predict — Finish prototype",
+  "id": "cyber-predict-finish-prototype",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}
