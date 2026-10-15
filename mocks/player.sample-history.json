@@ -1,0 +1,91 @@
+{
+ "data": {
+  "id": 999001,
+  "nickname": "apEX",
+  "slug": "apex-4fa564ba-a70d-4463-ba36-7787a87af6f3",
+  "first_name": "Dan",
+  "last_name": "Madesclaire",
+  "nationality": "FR",
+  "image_url": "https://cdn-api.pandascore.co/images/player/image/17515/600px_ap_ex___epicenter_2019.png",
+  "team": {
+   "id": 4,
+   "name": "Vitality",
+   "slug": "vitality-cs-go",
+   "image_url": "https://cdn-api.pandascore.co/images/team/image/3455/team_vitalitylogo_square.png"
+  },
+  "joined_at": "2026-10-15T20:39:46.676522Z",
+  "rating": 2010.5681289130755,
+  "rated_matches": 7,
+  "rating_is_seed": false,
+  "rating_history": [
+   {
+    "match_id": 1700,
+    "played_at": "2026-03-10T18:00:00Z",
+    "team_id": 4,
+    "rating_after": 1987.5681289130755,
+    "delta": 12.0
+   },
+   {
+    "match_id": 1701,
+    "played_at": "2026-04-11T18:00:00Z",
+    "team_id": 4,
+    "rating_after": 1979.5681289130755,
+    "delta": -8.0
+   },
+   {
+    "match_id": 1702,
+    "played_at": "2026-05-12T18:00:00Z",
+    "team_id": 4,
+    "rating_after": 1994.5681289130755,
+    "delta": 15.0
+   },
+   {
+    "match_id": 1703,
+    "played_at": "2026-06-13T18:00:00Z",
+    "team_id": 4,
+    "rating_after": 2004.5681289130755,
+    "delta": 10.0
+   },
+   {
+    "match_id": 1704,
+    "played_at": "2026-07-14T18:00:00Z",
+    "team_id": 4,
+    "rating_after": 1990.5681289130755,
+    "delta": -14.0
+   },
+   {
+    "match_id": 1705,
+    "played_at": "2026-08-15T18:00:00Z",
+    "team_id": 4,
+    "rating_after": 1999.5681289130755,
+    "delta": 9.0
+   },
+   {
+    "match_id": 1706,
+    "played_at": "2026-09-16T18:00:00Z",
+    "team_id": 4,
+    "rating_after": 2010.5681289130755,
+    "delta": 11.0
+   }
+  ],
+  "teams": [
+   {
+    "team": {
+     "id": 9,
+     "name": "Sample Old Team"
+    },
+    "joined_at": "2026-03-01T00:00:00Z",
+    "left_at": "2026-08-01T00:00:00Z"
+   },
+   {
+    "team": {
+     "id": 4,
+     "name": "Vitality",
+     "slug": "vitality-cs-go",
+     "image_url": "https://cdn-api.pandascore.co/images/team/image/3455/team_vitalitylogo_square.png"
+    },
+    "joined_at": "2026-10-15T20:39:46.676522Z"
+   }
+  ]
+ }
+}

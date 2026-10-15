@@ -1,13 +1,14 @@
 import { Filter } from 'lucide-react';
 import { Fragment, useDeferredValue, useMemo, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import { LatestTransfers, TopPlayers } from '../components/HomePanels';
 import { MatchRow } from '../components/MatchRow';
 import { EmptyState, ErrorState, Skeleton, StaleBanner } from '../components/States';
 import { useMatches } from '../data/MatchesContext';
 import { useNow, useResource } from '../hooks';
 import { getLiveAccuracy, getMetrics } from '../services/api';
 import type { Confidence, Match } from '../types';
-import { dayKey, dayLabel, edge, fmtNum, fmtPercent, parseDate, splitProb } from '../utils/format';
+import { dayKey, dayLabel, edge, fmtNum, fmtPercent, parseDate } from '../utils/format';
 
 type Sort = 'time' | 'edge';
 const CONFS = ['high', 'medium', 'low'] as const;
@@ -37,30 +38,6 @@ function Hero({ count }: { count: number | undefined }) {
       <Stat label="Точность в бою" value={live} hint={hint} />
       <Stat label="Матчей в обучении" value={metrics?.extra?.data?.n_matches ? fmtNum(metrics.extra.data.n_matches) : metrics?.n_train ? fmtNum(metrics.n_train) : '—'} />
     </section>
-  );
-}
-
-function TopPicks({ matches }: { matches: Match[] }) {
-  const top = useMemo(() => matches.filter((m) => m.prediction && m.status !== 'finished').sort((a, b) => edge(b) - edge(a)).slice(0, 5), [matches]);
-  if (!top.length) return null;
-  return (
-    <aside className="panel" aria-label="Самый заметный перевес">
-      <h2 className="h-block">Самый заметный перевес</h2>
-      <ol className="picks">
-        {top.map((m) => {
-          const s = splitProb(m.prediction!);
-          const fav = s.fav === 2 ? m.team2 : m.team1;
-          return (
-            <li key={m.id}>
-              <Link to={`/match/${m.id}`}>
-                <span className="picks__teams">{m.team1.name} <i>vs</i> {m.team2.name}</span>
-                <span className={`picks__fav c${s.fav || 1}`}>{fav.name} · {Math.max(s.p1, s.p2)}%</span>
-              </Link>
-            </li>
-          );
-        })}
-      </ol>
-    </aside>
   );
 }
 
@@ -150,7 +127,8 @@ export function MatchListPage() {
               ))
             )}
         </section>
-        <div className="side">{data && <TopPicks matches={data} />}</div>
+        <div className="side"><TopPlayers /></div>
+        <div className="side"><LatestTransfers /></div>
       </div>
     </>
   );

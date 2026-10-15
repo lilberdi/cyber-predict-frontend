@@ -184,3 +184,25 @@ export type PredictionResponse = ApiOk<Prediction>
 export type FinishedResponse = ApiOk<Match[]>
 export type LiveAccuracyResponse = ApiOk<LiveAccuracy>
 export type ModelMetricsResponse = ApiOk<ModelMetrics>
+
+// ---- Players, rosters, transfers ----
+export interface Player {
+  id: number;
+  nickname: string;
+  slug?: string;
+  first_name?: string;
+  last_name?: string;
+  nationality?: string; // ISO country code
+  image_url?: string;
+  team?: Team;
+  joined_at?: string; // when we first saw him on this team, not the real join date
+  rating?: number | null; // Team Impact Rating: Elo from team results, not personal stats
+  rated_matches: number;
+  rating_is_seed: boolean; // true: still the starting value (team Elo); show as provisional
+  rank?: number;
+}
+export interface RatingPoint { match_id: number; played_at: string; team_id: number; rating_after: number; delta: number }
+export interface RosterStint { team: Team; joined_at: string; left_at?: string | null }
+export interface PlayerDetail extends Player { rating_history: RatingPoint[]; teams: RosterStint[] }
+export interface TeamDetail extends Team { elo?: number | null; elo_matches: number; roster: Player[]; roster_note: string }
+export interface Transfer { player: Player; kind: 'join' | 'leave' | 'transfer'; from_team?: Team; to_team?: Team; changed_at: string }

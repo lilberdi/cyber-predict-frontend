@@ -34,6 +34,8 @@ export function Layout() {
           <nav aria-label="Основная навигация">
             <NavLink to="/" end>Матчи</NavLink>
             <NavLink to="/results">Результаты</NavLink>
+            <NavLink to="/players">Игроки</NavLink>
+            <NavLink to="/transfers">Трансферы</NavLink>
             <NavLink to="/about">О модели</NavLink>
           </nav>
           <div className="header__right">

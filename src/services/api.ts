@@ -1,4 +1,4 @@
-import type { LiveAccuracy, Match, ModelMetrics } from '../types';
+import type { LiveAccuracy, Match, ModelMetrics, Player, PlayerDetail, TeamDetail, Transfer } from '../types';
 
 const BASE = import.meta.env.VITE_API_URL ?? '';
 
@@ -50,3 +50,9 @@ export async function getHealth(signal?: AbortSignal): Promise<boolean> {
     return false;
   }
 }
+
+export const getRanking = (minGames = 0, limit = 50, signal?: AbortSignal) =>
+  get<Player[]>(`/rankings/players?limit=${limit}&min_games=${minGames}`, signal);
+export const getPlayer = (id: string, signal?: AbortSignal) => get<PlayerDetail>(`/players/${encodeURIComponent(id)}`, signal);
+export const getTeam = (id: string, signal?: AbortSignal) => get<TeamDetail>(`/teams/${encodeURIComponent(id)}`, signal);
+export const getTransfers = (limit = 50, signal?: AbortSignal) => get<Transfer[]>(`/transfers?limit=${limit}`, signal);

@@ -18,3 +18,9 @@ npm run build
 - `/about` — метрики модели, сравнение, калибровка (грузится лениво)
 
 Тёмная/светлая тема, переключатель в шапке. Токены дизайна — CSS-переменные в `src/styles/global.css`.
+
+## Игроки, команды, трансферы
+- `/players` рейтинг игроков (Team Impact Rating, `?hide=1` скрывает новичков), `/players/:id`, `/teams/:id`, `/transfers`.
+- Слепки живого API лежат в `mocks/`. Для проверки состояний (пусто, ошибка 500, график с историей):
+  `npm run mock`, затем `VITE_PROXY_TARGET=http://localhost:18081 npm run dev`; режим: `curl localhost:18081/__mode/ok|empty|error`.
+  `player.sample-history.json` и `transfers.sample.json` составлены вручную (id 999001), не реальные данные.

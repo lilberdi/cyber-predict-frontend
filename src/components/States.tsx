@@ -42,10 +42,10 @@ export function StaleBanner({ onRetry }: { onRetry: () => void }) {
   );
 }
 
-export function NotFound() {
+export function NotFound({ title = 'Матч не найден', backTo = '/', backLabel = 'К списку матчей' }: { title?: string; backTo?: string; backLabel?: string }) {
   return (
-    <EmptyState title="Матч не найден" text="Возможно, ссылка устарела.">
-      <Link className="btn" to="/">К списку матчей</Link>
+    <EmptyState title={title} text="Возможно, ссылка устарела.">
+      <Link className="btn" to={backTo}>{backLabel}</Link>
     </EmptyState>
   );
 }

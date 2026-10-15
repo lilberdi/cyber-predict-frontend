@@ -1,0 +1,57 @@
+{
+ "data": [
+  {
+   "player": {
+    "id": 404,
+    "nickname": "apEX",
+    "nationality": "FR",
+    "rated_matches": 0,
+    "rating_is_seed": true
+   },
+   "kind": "transfer",
+   "from_team": {
+    "id": 9,
+    "name": "Sample Old Team"
+   },
+   "to_team": {
+    "id": 4,
+    "name": "Vitality",
+    "slug": "vitality-cs-go",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/3455/team_vitalitylogo_square.png"
+   },
+   "changed_at": "2026-10-14T10:00:00Z"
+  },
+  {
+   "player": {
+    "id": 405,
+    "nickname": "ropz",
+    "rated_matches": 0,
+    "rating_is_seed": true
+   },
+   "kind": "join",
+   "to_team": {
+    "id": 4,
+    "name": "Vitality",
+    "slug": "vitality-cs-go",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/3455/team_vitalitylogo_square.png"
+   },
+   "changed_at": "2026-10-13T10:00:00Z"
+  },
+  {
+   "player": {
+    "id": 406,
+    "nickname": "ZywOo",
+    "rated_matches": 0,
+    "rating_is_seed": true
+   },
+   "kind": "leave",
+   "from_team": {
+    "id": 4,
+    "name": "Vitality",
+    "slug": "vitality-cs-go",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/3455/team_vitalitylogo_square.png"
+   },
+   "changed_at": "2026-10-12T10:00:00Z"
+  }
+ ]
+}
