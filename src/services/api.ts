@@ -1,24 +1,52 @@
-import { matches, predictions, teams, tournaments } from '../data/mockData';
-import type { Match, Prediction, Team, Tournament } from '../types';
+import type { LiveAccuracy, Match, ModelMetrics } from '../types';
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
+const BASE = import.meta.env.VITE_API_URL ?? '';
 
-async function requestWithFallback<T>(path: string, fallback: T): Promise<T> {
-  try {
-    const response = await fetch(`${API_URL}${path}`);
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
-    }
-    return (await response.json()) as T;
-  } catch {
-    return fallback;
+export class ApiError extends Error {
+  constructor(message: string, readonly status: number, readonly code?: string) {
+    super(message);
   }
 }
 
-export const getMatches = () => requestWithFallback<Match[]>('/matches', matches);
-export const getMatch = (id: string) => requestWithFallback<Match | undefined>(`/matches/${id}`, matches.find((match) => match.id === id));
-export const getTeams = () => requestWithFallback<Team[]>('/teams', teams);
-export const getTeam = (id: string) => requestWithFallback<Team | undefined>(`/teams/${id}`, teams.find((team) => team.id === id));
-export const getPredictions = () => requestWithFallback<Prediction[]>('/predictions', predictions);
-export const getPrediction = (id: string) => requestWithFallback<Prediction | undefined>(`/predictions/${id}`, predictions.find((prediction) => prediction.id === id));
-export const getTournaments = () => requestWithFallback<Tournament[]>('/tournaments', tournaments);
+async function get<T>(path: string, signal?: AbortSignal): Promise<T> {
+  let res: Response;
+  try {
+    res = await fetch(`${BASE}/api/v1${path}`, { signal });
+  } catch (e) {
+    if ((e as Error).name === 'AbortError') throw e;
+    throw new ApiError('Не удалось связаться с сервером', 0);
+  }
+  let body: { data?: T; error?: { code?: string; message?: string } } | undefined;
+  try {
+    body = await res.json();
+  } catch {
+    /* тело не JSON (например, 502 от прокси) */
+  }
+  if (!res.ok || !body || body.data === undefined) {
+    throw new ApiError(body?.error?.message ?? 'Сервер временно недоступен', res.status, body?.error?.code);
+  }
+  return body.data;
+}
+
+export const getUpcoming = (limit = 100, signal?: AbortSignal) => get<Match[]>(`/matches/upcoming?limit=${limit}`, signal);
+export const getFinished = (limit = 50, signal?: AbortSignal) => get<Match[]>(`/matches/finished?limit=${limit}`, signal);
+export const getMatch = (id: string, signal?: AbortSignal) => get<Match>(`/matches/${encodeURIComponent(id)}`, signal);
+export const getLiveAccuracy = (signal?: AbortSignal) => get<LiveAccuracy>('/model/live-accuracy', signal);
+
+let metricsCache: Promise<ModelMetrics> | undefined;
+/** Метрики грузим один раз за сессию. */
+export function getMetrics(): Promise<ModelMetrics> {
+  metricsCache ??= get<ModelMetrics>('/model/metrics').catch((e) => {
+    metricsCache = undefined;
+    throw e;
+  });
+  return metricsCache;
+}
+
+export async function getHealth(signal?: AbortSignal): Promise<boolean> {
+  try {
+    return (await fetch(`${BASE}/health`, { signal })).ok;
+  } catch {
+    return false;
+  }
+}
