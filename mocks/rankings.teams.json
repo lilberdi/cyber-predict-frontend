@@ -1,0 +1,956 @@
+{
+  "data": [
+    {
+      "rank": 1,
+      "team": {
+        "id": 9991000,
+        "name": "Vitality"
+      },
+      "elo": 1998,
+      "elo_matches": 150,
+      "change_7d": -6.4,
+      "last_played": "2026-11-05T10:44:02.001Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991001,
+            "name": "Spirit"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991002,
+            "name": "MOUZ"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991003,
+            "name": "FaZe"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991004,
+            "name": "Natus Vincere"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991005,
+            "name": "The MongolZ"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "team": {
+        "id": 9991001,
+        "name": "Spirit"
+      },
+      "elo": 1974.8,
+      "elo_matches": 124,
+      "change_7d": 9.9,
+      "last_played": "2026-11-06T05:32:00.684Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991002,
+            "name": "MOUZ"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991003,
+            "name": "FaZe"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991004,
+            "name": "Natus Vincere"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991005,
+            "name": "The MongolZ"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991006,
+            "name": "FURIA"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "team": {
+        "id": 9991002,
+        "name": "MOUZ"
+      },
+      "elo": 1935.4,
+      "elo_matches": 149,
+      "change_7d": -3.1,
+      "last_played": "2026-11-04T19:45:13.127Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991003,
+            "name": "FaZe"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991004,
+            "name": "Natus Vincere"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991005,
+            "name": "The MongolZ"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991006,
+            "name": "FURIA"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991007,
+            "name": "Legacy"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "team": {
+        "id": 9991003,
+        "name": "FaZe"
+      },
+      "elo": 1921.7,
+      "elo_matches": 72,
+      "change_7d": 4.4,
+      "last_played": "2026-11-03T22:56:37.889Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991004,
+            "name": "Natus Vincere"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991005,
+            "name": "The MongolZ"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991006,
+            "name": "FURIA"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991007,
+            "name": "Legacy"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991008,
+            "name": "G2"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "team": {
+        "id": 9991004,
+        "name": "Natus Vincere"
+      },
+      "elo": 1897.5,
+      "elo_matches": 74,
+      "change_7d": -3.4,
+      "last_played": "2026-11-04T09:07:33.473Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991005,
+            "name": "The MongolZ"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991006,
+            "name": "FURIA"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991007,
+            "name": "Legacy"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991008,
+            "name": "G2"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991009,
+            "name": "Aurora"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "team": {
+        "id": 9991005,
+        "name": "The MongolZ"
+      },
+      "elo": 1870.3,
+      "elo_matches": 122,
+      "change_7d": 19.6,
+      "last_played": "2026-11-04T12:23:36.055Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991006,
+            "name": "FURIA"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991007,
+            "name": "Legacy"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991008,
+            "name": "G2"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991009,
+            "name": "Aurora"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991010,
+            "name": "Falcons"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "team": {
+        "id": 9991006,
+        "name": "FURIA"
+      },
+      "elo": 1856,
+      "elo_matches": 88,
+      "change_7d": -11.9,
+      "last_played": "2026-11-06T02:39:14.116Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991007,
+            "name": "Legacy"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991008,
+            "name": "G2"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991009,
+            "name": "Aurora"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991010,
+            "name": "Falcons"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991011,
+            "name": "paiN"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "team": {
+        "id": 9991007,
+        "name": "Legacy"
+      },
+      "elo": 1817.4,
+      "elo_matches": 148,
+      "change_7d": 12.4,
+      "last_played": "2026-11-05T02:56:57.877Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991008,
+            "name": "G2"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991009,
+            "name": "Aurora"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991010,
+            "name": "Falcons"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991011,
+            "name": "paiN"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991012,
+            "name": "Astralis"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "team": {
+        "id": 9991008,
+        "name": "G2"
+      },
+      "elo": 1779,
+      "elo_matches": 68,
+      "change_7d": -3,
+      "last_played": "2026-11-02T00:41:12.211Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991009,
+            "name": "Aurora"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991010,
+            "name": "Falcons"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991011,
+            "name": "paiN"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991012,
+            "name": "Astralis"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991013,
+            "name": "Liquid"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "team": {
+        "id": 9991009,
+        "name": "Aurora"
+      },
+      "elo": 1750,
+      "elo_matches": 121,
+      "change_7d": -7.3,
+      "last_played": "2026-11-05T09:16:00.441Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991010,
+            "name": "Falcons"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991011,
+            "name": "paiN"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991012,
+            "name": "Astralis"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991013,
+            "name": "Liquid"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991000,
+            "name": "Vitality"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "team": {
+        "id": 9991010,
+        "name": "Falcons"
+      },
+      "elo": 1734.1,
+      "elo_matches": 122,
+      "change_7d": 17.7,
+      "last_played": "2026-11-06T07:33:09.676Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991011,
+            "name": "paiN"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991012,
+            "name": "Astralis"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991013,
+            "name": "Liquid"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991000,
+            "name": "Vitality"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991001,
+            "name": "Spirit"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "team": {
+        "id": 9991011,
+        "name": "paiN"
+      },
+      "elo": 1715.1,
+      "elo_matches": 88,
+      "change_7d": 17.5,
+      "last_played": "2026-11-03T16:56:48.685Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991012,
+            "name": "Astralis"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991013,
+            "name": "Liquid"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991000,
+            "name": "Vitality"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991001,
+            "name": "Spirit"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991002,
+            "name": "MOUZ"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "team": {
+        "id": 9991012,
+        "name": "Astralis"
+      },
+      "elo": 1684.1,
+      "elo_matches": 144,
+      "change_7d": 18.7,
+      "last_played": "2026-11-05T12:03:19.325Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991013,
+            "name": "Liquid"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991000,
+            "name": "Vitality"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991001,
+            "name": "Spirit"
+          },
+          "won": false,
+          "score_for": 0,
+          "score_against": 2
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991002,
+            "name": "MOUZ"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991003,
+            "name": "FaZe"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "team": {
+        "id": 9991013,
+        "name": "Liquid"
+      },
+      "elo": 1652.2,
+      "elo_matches": 102,
+      "change_7d": 4.5,
+      "last_played": "2026-11-03T23:11:28.886Z",
+      "form": [
+        {
+          "match_id": 999100,
+          "played_at": "2026-11-04T12:00:00.000Z",
+          "opponent": {
+            "id": 9991000,
+            "name": "Vitality"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999101,
+          "played_at": "2026-11-02T12:00:00.000Z",
+          "opponent": {
+            "id": 9991001,
+            "name": "Spirit"
+          },
+          "won": false,
+          "score_for": 1,
+          "score_against": 2
+        },
+        {
+          "match_id": 999102,
+          "played_at": "2026-10-31T12:00:00.000Z",
+          "opponent": {
+            "id": 9991002,
+            "name": "MOUZ"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999103,
+          "played_at": "2026-10-29T12:00:00.000Z",
+          "opponent": {
+            "id": 9991003,
+            "name": "FaZe"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 0
+        },
+        {
+          "match_id": 999104,
+          "played_at": "2026-10-27T12:00:00.000Z",
+          "opponent": {
+            "id": 9991004,
+            "name": "Natus Vincere"
+          },
+          "won": true,
+          "score_for": 2,
+          "score_against": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "data": {
+    "match_id": 999101,
+    "team1": {
+      "id": 9991007,
+      "name": "Legacy"
+    },
+    "team2": {
+      "id": 9991006,
+      "name": "FURIA"
+    },
+    "before": "2026-11-06T12:00:00.000Z",
+    "window_days": 365,
+    "team1_wins": 2,
+    "team2_wins": 2,
+    "meetings": [
+      {
+        "id": 999110,
+        "source": "pandascore",
+        "status": "finished",
+        "best_of": 3,
+        "scheduled_at": "2026-10-17T12:00:00.000Z",
+        "tournament": "Sample Masters 2026",
+        "tournament_tier": "a",
+        "team1": {
+          "id": 9991007,
+          "name": "Legacy"
+        },
+        "team2": {
+          "id": 9991006,
+          "name": "FURIA"
+        },
+        "score": {
+          "team1": 2,
+          "team2": 1
+        },
+        "winner_team_id": 9991007
+      },
+      {
+        "id": 999111,
+        "source": "pandascore",
+        "status": "finished",
+        "best_of": 3,
+        "scheduled_at": "2026-09-07T12:00:00.000Z",
+        "tournament": "Sample Masters 2026",
+        "tournament_tier": "a",
+        "team1": {
+          "id": 9991006,
+          "name": "FURIA"
+        },
+        "team2": {
+          "id": 9991007,
+          "name": "Legacy"
+        },
+        "score": {
+          "team1": 2,
+          "team2": 0
+        },
+        "winner_team_id": 9991006
+      },
+      {
+        "id": 999112,
+        "source": "pandascore",
+        "status": "finished",
+        "best_of": 3,
+        "scheduled_at": "2026-07-29T12:00:00.000Z",
+        "tournament": "Sample Masters 2026",
+        "tournament_tier": "a",
+        "team1": {
+          "id": 9991007,
+          "name": "Legacy"
+        },
+        "team2": {
+          "id": 9991006,
+          "name": "FURIA"
+        },
+        "score": {
+          "team1": 2,
+          "team2": 0
+        },
+        "winner_team_id": 9991007
+      },
+      {
+        "id": 999113,
+        "source": "pandascore",
+        "status": "finished",
+        "best_of": 3,
+        "scheduled_at": "2026-06-19T12:00:00.000Z",
+        "tournament": "Sample Masters 2026",
+        "tournament_tier": "a",
+        "team1": {
+          "id": 9991006,
+          "name": "FURIA"
+        },
+        "team2": {
+          "id": 9991007,
+          "name": "Legacy"
+        },
+        "score": {
+          "team1": 2,
+          "team2": 1
+        },
+        "winner_team_id": 9991006
+      }
+    ],
+    "form1": [
+      {
+        "match_id": 999100,
+        "played_at": "2026-11-04T12:00:00.000Z",
+        "opponent": {
+          "id": 9991008,
+          "name": "G2"
+        },
+        "won": false,
+        "score_for": 0,
+        "score_against": 2
+      },
+      {
+        "match_id": 999101,
+        "played_at": "2026-11-02T12:00:00.000Z",
+        "opponent": {
+          "id": 9991009,
+          "name": "Aurora"
+        },
+        "won": true,
+        "score_for": 2,
+        "score_against": 1
+      },
+      {
+        "match_id": 999102,
+        "played_at": "2026-10-31T12:00:00.000Z",
+        "opponent": {
+          "id": 9991010,
+          "name": "Falcons"
+        },
+        "won": false,
+        "score_for": 1,
+        "score_against": 2
+      },
+      {
+        "match_id": 999103,
+        "played_at": "2026-10-29T12:00:00.000Z",
+        "opponent": {
+          "id": 9991011,
+          "name": "paiN"
+        },
+        "won": false,
+        "score_for": 0,
+        "score_against": 2
+      },
+      {
+        "match_id": 999104,
+        "played_at": "2026-10-27T12:00:00.000Z",
+        "opponent": {
+          "id": 9991012,
+          "name": "Astralis"
+        },
+        "won": false,
+        "score_for": 0,
+        "score_against": 2
+      }
+    ],
+    "form2": [
+      {
+        "match_id": 999100,
+        "played_at": "2026-11-04T12:00:00.000Z",
+        "opponent": {
+          "id": 9991007,
+          "name": "Legacy"
+        },
+        "won": true,
+        "score_for": 2,
+        "score_against": 1
+      },
+      {
+        "match_id": 999101,
+        "played_at": "2026-11-02T12:00:00.000Z",
+        "opponent": {
+          "id": 9991008,
+          "name": "G2"
+        },
+        "won": false,
+        "score_for": 0,
+        "score_against": 2
+      },
+      {
+        "match_id": 999102,
+        "played_at": "2026-10-31T12:00:00.000Z",
+        "opponent": {
+          "id": 9991009,
+          "name": "Aurora"
+        },
+        "won": false,
+        "score_for": 1,
+        "score_against": 2
+      },
+      {
+        "match_id": 999103,
+        "played_at": "2026-10-29T12:00:00.000Z",
+        "opponent": {
+          "id": 9991010,
+          "name": "Falcons"
+        },
+        "won": false,
+        "score_for": 1,
+        "score_against": 2
+      },
+      {
+        "match_id": 999104,
+        "played_at": "2026-10-27T12:00:00.000Z",
+        "opponent": {
+          "id": 9991011,
+          "name": "paiN"
+        },
+        "won": true,
+        "score_for": 2,
+        "score_against": 1
+      }
+    ]
+  }
+}

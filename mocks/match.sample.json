@@ -1,0 +1,49 @@
+{
+  "data": {
+    "id": 999101,
+    "source": "pandascore",
+    "status": "upcoming",
+    "best_of": 3,
+    "scheduled_at": "2026-11-06T17:00:00.000Z",
+    "tournament": "Sample Masters 2026",
+    "tournament_tier": "a",
+    "team1": {
+      "id": 9991007,
+      "name": "Legacy"
+    },
+    "team2": {
+      "id": 9991006,
+      "name": "FURIA"
+    },
+    "score": {
+      "team1": null,
+      "team2": null
+    },
+    "prediction": {
+      "match_id": 999101,
+      "model_name": "elo_xgboost",
+      "model_version": "0.2.0",
+      "p_team1_win": 0.56,
+      "p_team2_win": 0.44,
+      "confidence": "low",
+      "created_at": "2026-11-06T11:00:00.000Z",
+      "top_features": [
+        {
+          "name": "elo_diff",
+          "value": 29,
+          "contribution": 0.094
+        },
+        {
+          "name": "h2h_diff",
+          "value": 0.5,
+          "contribution": 0.061
+        },
+        {
+          "name": "form5_diff",
+          "value": 0.2,
+          "contribution": 0.04
+        }
+      ]
+    }
+  }
+}
