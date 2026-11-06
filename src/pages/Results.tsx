@@ -1,6 +1,7 @@
 import { CheckCircle2, XCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Percent } from '../components/ProbabilityBar';
+import { LiveQuality } from '../components/LiveQuality';
 import { EmptyState, ErrorState, Skeleton, StaleBanner } from '../components/States';
 import { TeamBadge } from '../components/TeamBadge';
 import { useResource } from '../hooks';
@@ -73,6 +74,8 @@ export function ResultsPage() {
             </>
           )}
       </section>
+
+      {a && a.evaluated > 0 && <LiveQuality a={a} />}
 
       <section aria-label="Сыгранные матчи">
         <h2 className="h-block">Сыгранные матчи</h2>

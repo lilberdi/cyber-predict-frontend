@@ -88,9 +88,21 @@ export interface AccuracyBucket {
   accuracy: number
 }
 
+export interface ReliabilityBin { bin: string; n: number; predicted: number; actual: number }
+export interface AccuracyPoint { date: string; evaluated: number; correct: number; accuracy: number }
+
 export interface LiveAccuracy extends AccuracyBucket {
   by_confidence: Partial<Record<Confidence | 'unknown', AccuracyBucket>>
   by_model: Record<string, AccuracyBucket>
+  /** Разрез по тиру турнира (s, a, b, c, d, unknown). Нет у старых версий backend. */
+  by_tier?: Record<string, AccuracyBucket>
+  /** Качество самих вероятностей: меньше = лучше; «всегда 50%» даёт 0,693 и 0,25. */
+  log_loss?: number
+  brier?: number
+  /** Калибровка по вероятности фаворита: что говорила модель и как часто он выигрывал. */
+  reliability?: ReliabilityBin[]
+  /** Накопленная точность по дням (UTC). */
+  timeline?: AccuracyPoint[]
   /** Время самого раннего учтённого матча. */
   since?: string
   note: string
