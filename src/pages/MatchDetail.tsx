@@ -2,6 +2,7 @@ import { CheckCircle2, XCircle } from 'lucide-react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ConfidenceBadge, MatchTags, ModelBadge } from '../components/Badges';
 import { FeatureBars } from '../components/FeatureBars';
+import { HeadToHeadPanel } from '../components/HeadToHead';
 import { Percent, ProbabilityBar } from '../components/ProbabilityBar';
 import { ErrorState, NotFound, Skeleton } from '../components/States';
 import { TeamBadge } from '../components/TeamBadge';
@@ -85,6 +86,8 @@ export function MatchDetailPage() {
           {p.top_features && p.top_features.length > 0 && <FeatureBars features={p.top_features} name1={m.team1.name} name2={m.team2.name} />}
         </section>
       )}
+
+      <HeadToHeadPanel matchId={String(m.id)} />
     </>
   );
 }

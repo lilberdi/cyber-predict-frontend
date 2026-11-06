@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { RatingPoint } from '../types';
+import type { Team } from '../types';
 import { fmtNum, fmtSigned } from '../utils/format';
 
 const W = 640, H = 260, L = 48, R = 16, T = 16, B = 32;
 const dateFmt = new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'short', year: '2-digit' });
 
-export function RatingChart({ history }: { history: RatingPoint[] }) {
+/** Точка рейтинга: подходит и для игроков (RatingPoint), и для команд (EloPoint). */
+export interface ChartPoint { match_id: number; played_at: string; rating_after: number; delta: number; opponent?: Team }
+
+export function RatingChart({ history, label = 'График изменения рейтинга игрока по матчам' }: { history: ChartPoint[]; label?: string }) {
   const [active, setActive] = useState<number | null>(null);
   const pts = history
     .map((p) => ({ ...p, t: new Date(p.played_at).getTime() }))
@@ -28,7 +31,7 @@ export function RatingChart({ history }: { history: RatingPoint[] }) {
   return (
     <figure className="chart">
       <div className="rchart">
-        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="График изменения рейтинга игрока по матчам" onMouseLeave={() => setActive(null)}>
+        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label} onMouseLeave={() => setActive(null)}>
           {ticks.map((tk) => (
             <g key={tk}>
               <line x1={L} x2={W - R} y1={y(tk)} y2={y(tk)} className="rel__grid" />
@@ -52,7 +55,7 @@ export function RatingChart({ history }: { history: RatingPoint[] }) {
         {a && (
           <div className="rchart__tip" style={{ left: `${(x(a.t) / W) * 100}%` }} role="status">
             <b>{fmtNum(a.rating_after)}</b> <span className={a.delta >= 0 ? 'ok' : 'bad'}>{fmtSigned(a.delta, 1)}</span>
-            <small>{dateFmt.format(a.t)} · <Link to={`/match/${a.match_id}`}>матч #{a.match_id}</Link></small>
+            <small>{dateFmt.format(a.t)} · <Link to={`/match/${a.match_id}`}>{a.opponent ? `против ${a.opponent.name}` : `матч #${a.match_id}`}</Link></small>
           </div>
         )}
       </div>
@@ -60,7 +63,7 @@ export function RatingChart({ history }: { history: RatingPoint[] }) {
         <summary>Таблица данных</summary>
         <table>
           <thead><tr><th>Дата</th><th>Матч</th><th>Рейтинг</th><th>Изменение</th></tr></thead>
-          <tbody>{[...pts].reverse().map((p) => <tr key={p.match_id}><td>{dateFmt.format(p.t)}</td><td><Link to={`/match/${p.match_id}`}>#{p.match_id}</Link></td><td>{fmtNum(p.rating_after)}</td><td>{fmtSigned(p.delta, 1)}</td></tr>)}</tbody>
+          <tbody>{[...pts].reverse().map((p) => <tr key={p.match_id}><td>{dateFmt.format(p.t)}</td><td><Link to={`/match/${p.match_id}`}>{p.opponent ? p.opponent.name : `#${p.match_id}`}</Link></td><td>{fmtNum(p.rating_after)}</td><td>{fmtSigned(p.delta, 1)}</td></tr>)}</tbody>
         </table>
       </details>
     </figure>

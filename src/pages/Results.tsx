@@ -72,6 +72,7 @@ export function ResultsPage() {
               </div>
             </>
           )}
+        <p className="note"><Link className="link" to="/results/upsets">Неожиданные результаты →</Link> где уверенный фаворит модели проиграл</p>
       </section>
 
       <section aria-label="Сыгранные матчи">

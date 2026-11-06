@@ -1,4 +1,4 @@
-import type { LiveAccuracy, Match, ModelMetrics, Player, PlayerDetail, TeamDetail, Transfer } from '../types';
+import type { HeadToHead, LiveAccuracy, Match, ModelMetrics, Player, PlayerDetail, TeamDetail, TeamRanking, Transfer, Upsets } from '../types';
 
 const BASE = import.meta.env.VITE_API_URL ?? '';
 
@@ -56,3 +56,7 @@ export const getRanking = (minGames = 0, limit = 50, signal?: AbortSignal) =>
 export const getPlayer = (id: string, signal?: AbortSignal) => get<PlayerDetail>(`/players/${encodeURIComponent(id)}`, signal);
 export const getTeam = (id: string, signal?: AbortSignal) => get<TeamDetail>(`/teams/${encodeURIComponent(id)}`, signal);
 export const getTransfers = (limit = 50, signal?: AbortSignal) => get<Transfer[]>(`/transfers?limit=${limit}`, signal);
+export const getTeamRanking = (minGames = 10, activeDays = 90, limit = 100, signal?: AbortSignal) =>
+  get<TeamRanking[]>(`/rankings/teams?limit=${limit}&min_games=${minGames}&active_days=${activeDays}`, signal);
+export const getHeadToHead = (id: string, signal?: AbortSignal) => get<HeadToHead>(`/matches/${encodeURIComponent(id)}/h2h`, signal);
+export const getUpsets = (minProb = 0.75, limit = 50, signal?: AbortSignal) => get<Upsets>(`/matches/upsets?min_prob=${minProb}&limit=${limit}`, signal);
