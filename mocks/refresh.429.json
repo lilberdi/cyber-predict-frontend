@@ -1,0 +1,7 @@
+{
+ "error": {
+  "code": "cooldown",
+  "message": "matches were refreshed a moment ago",
+  "retry_after_seconds": 60
+ }
+}

@@ -9,18 +9,30 @@ const dir = dirname(fileURLToPath(import.meta.url));
 const load = (f) => readFileSync(join(dir, f), 'utf8');
 const REAL = { host: 'localhost', port: 18080 };
 let mode = 'ok';
+let refreshedAt = 0; // имитация общего лимита: 15 секунд
+const COOLDOWN = 15_000;
 
 const routes = [
   [/^\/api\/v1\/rankings\/players/, (u) => (u.searchParams.get('min_games') > 0 ? '{"data":[]}' : load('rankings.json'))],
   [/^\/api\/v1\/players\/999001$/, () => load('player.sample-history.json')],
   [/^\/api\/v1\/players\/404$/, () => load('player.seed.json')],
   [/^\/api\/v1\/teams\/20$/, () => load('team.json')],
+  [/^\/api\/v1\/matches\/finished/, () => load('finished.mixed.json')],
+  [/^\/api\/v1\/model\/live-accuracy/, () => load('live-accuracy.sample.json')],
   [/^\/api\/v1\/transfers/, () => (mode === 'ok' ? load('transfers.sample.json') : load('transfers.empty.json'))],
 ];
 
 http.createServer((req, res) => {
   const u = new URL(req.url, 'http://x');
   if (u.pathname.startsWith('/__mode/')) { mode = u.pathname.split('/').pop(); res.end(mode); return; }
+  if (u.pathname === '/api/v1/matches/refresh' && req.method === 'POST') {
+    res.setHeader('content-type', 'application/json');
+    if (mode === 'down502') { res.statusCode = 502; res.end('{"error":{"code":"upstream_error","message":"pandascore down"}}'); return; }
+    const left = refreshedAt + COOLDOWN - Date.now();
+    if (left > 0) { res.statusCode = 429; res.setHeader('Retry-After', Math.ceil(left / 1000)); res.end(JSON.stringify({ error: { code: 'cooldown', message: 'matches were refreshed a moment ago', retry_after_seconds: Math.ceil(left / 1000) } })); return; }
+    if (mode !== 'nothing') refreshedAt = Date.now();
+    res.end(load(mode === 'nothing' ? 'refresh.nothing.json' : 'refresh.ok.json')); return;
+  }
   const hit = routes.find(([re]) => re.test(u.pathname));
   if (hit) {
     res.setHeader('content-type', 'application/json');

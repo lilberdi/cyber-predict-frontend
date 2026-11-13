@@ -24,3 +24,7 @@ npm run build
 - Слепки живого API лежат в `mocks/`. Для проверки состояний (пусто, ошибка 500, график с историей):
   `npm run mock`, затем `VITE_PROXY_TARGET=http://localhost:18081 npm run dev`; режим: `curl localhost:18081/__mode/ok|empty|error`.
   `player.sample-history.json` и `transfers.sample.json` составлены вручную (id 999001), не реальные данные.
+
+## Обновление матчей
+Кнопка «Обновить матчи» (экран «Результаты», на ленте — только если есть «зависшие» матчи) вызывает `POST /api/v1/matches/refresh` только по клику. Таймер берётся из ответа (`cooldown_seconds`, `retry_after_seconds`), лимит общий на весь сервис.
+Моки для проверки: `mocks/finished.mixed.json` (угадала / не угадала / не засчитан ×3 / после старта / идёт / без прогноза), `refresh.*.json`; режимы мок-сервера `ok|nothing|down502|empty|error`.

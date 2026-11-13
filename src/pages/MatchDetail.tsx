@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ConfidenceBadge, MatchTags, ModelBadge } from '../components/Badges';
 import { FeatureBars } from '../components/FeatureBars';
 import { Percent, ProbabilityBar } from '../components/ProbabilityBar';
+import { HeadToHeadBlock } from '../components/HeadToHead';
 import { ErrorState, NotFound, Skeleton } from '../components/States';
 import { TeamBadge } from '../components/TeamBadge';
 import { useMatches } from '../data/MatchesContext';
@@ -30,7 +31,7 @@ export function MatchDetailPage() {
   const p = m.prediction;
   const s = p ? splitProb(p) : undefined;
   const rel = relativeTime(m, now);
-  const finished = m.status === 'finished' && m.score.team1 !== null;
+  const finished = m.status === 'finished' && m.score.team1 !== null && !m.voided_reason;
   const winner = m.winner_team_id === m.team1.id ? 1 : m.winner_team_id === m.team2.id ? 2 : 0;
 
   return (
@@ -65,6 +66,7 @@ export function MatchDetailPage() {
               <ModelBadge name={p.model_name} />
               <ConfidenceBadge confidence={p.confidence} />
               {s?.even && <span className="badge">Равные шансы</span>}
+              {m.voided_reason && <span className="badge">Не засчитан: {{ canceled: 'матч отменён', forfeit: 'технический результат', draw: 'ничья' }[m.voided_reason] ?? m.voided_reason}</span>}
               {m.prediction_correct !== undefined && (
                 <span className={`badge ${m.prediction_correct ? 'badge--high' : 'badge--low'}`}>
                   {m.prediction_correct ? <><CheckCircle2 size={14} /> Угадали</> : <><XCircle size={14} /> Не угадали</>}
@@ -85,6 +87,7 @@ export function MatchDetailPage() {
           {p.top_features && p.top_features.length > 0 && <FeatureBars features={p.top_features} name1={m.team1.name} name2={m.team2.name} />}
         </section>
       )}
+      <HeadToHeadBlock matchId={id} />
     </>
   );
 }

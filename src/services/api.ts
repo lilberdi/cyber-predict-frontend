@@ -1,4 +1,4 @@
-import type { LiveAccuracy, Match, ModelMetrics, Player, PlayerDetail, TeamDetail, Transfer } from '../types';
+import type { HeadToHead, TeamRanking, Upsets, LiveAccuracy, RefreshResult, Match, ModelMetrics, Player, PlayerDetail, TeamDetail, Transfer } from '../types';
 
 const BASE = import.meta.env.VITE_API_URL ?? '';
 
@@ -56,3 +56,37 @@ export const getRanking = (minGames = 0, limit = 50, signal?: AbortSignal) =>
 export const getPlayer = (id: string, signal?: AbortSignal) => get<PlayerDetail>(`/players/${encodeURIComponent(id)}`, signal);
 export const getTeam = (id: string, signal?: AbortSignal) => get<TeamDetail>(`/teams/${encodeURIComponent(id)}`, signal);
 export const getTransfers = (limit = 50, signal?: AbortSignal) => get<Transfer[]>(`/transfers?limit=${limit}`, signal);
+
+export const getTeamRanking = (activeDays = 90, limit = 50, signal?: AbortSignal) =>
+  get<TeamRanking[]>(`/rankings/teams?limit=${limit}&active_days=${activeDays}`, signal);
+export const getHeadToHead = (id: string, signal?: AbortSignal) => get<HeadToHead>(`/matches/${encodeURIComponent(id)}/h2h`, signal);
+export const getUpsets = (minProb = 0.75, limit = 50, signal?: AbortSignal) => get<Upsets>(`/matches/upsets?min_prob=${minProb}&limit=${limit}`, signal);
+
+export type RefreshFailure = 'cooldown' | 'upstream' | 'config' | 'network' | 'unknown';
+
+export class RefreshError extends ApiError {
+  constructor(message: string, status: number, readonly kind: RefreshFailure, readonly retryAfter?: number) {
+    super(message, status);
+  }
+}
+
+/** Ручное обновление итогов матчей. Только по клику, без автоповторов. */
+export async function refreshMatches(): Promise<RefreshResult> {
+  let res: Response;
+  try {
+    res = await fetch(`${BASE}/api/v1/matches/refresh`, { method: 'POST' });
+  } catch {
+    throw new RefreshError('Не удалось связаться с сервером', 0, 'network');
+  }
+  let body: { data?: RefreshResult; error?: { code?: string; message?: string; retry_after_seconds?: number } } | undefined;
+  try { body = await res.json(); } catch { /* тело не JSON */ }
+  if (res.ok && body?.data) return body.data;
+  if (res.status === 429) {
+    const header = Number(res.headers.get('Retry-After'));
+    const secs = body?.error?.retry_after_seconds ?? (Number.isFinite(header) && header > 0 ? header : undefined);
+    throw new RefreshError('Матчи уже обновлялись', 429, 'cooldown', secs);
+  }
+  if (res.status === 503) throw new RefreshError('Обновление матчей не настроено на сервере', 503, 'config');
+  if (res.status === 502) throw new RefreshError('Источник данных (PandaScore) сейчас недоступен', 502, 'upstream');
+  throw new RefreshError(body?.error?.message ?? 'Не удалось обновить матчи', res.status, 'unknown');
+}

@@ -14,6 +14,8 @@ import { TransfersPage } from './pages/Transfers';
 import './styles/global.css';
 
 // Страница с графиками грузится лениво.
+import { TeamsRankingPage } from './pages/TeamsRanking';
+import { UpsetsPage } from './pages/Upsets';
 const AboutPage = lazy(() => import('./pages/About'));
 
 const router = createBrowserRouter([
@@ -23,6 +25,8 @@ const router = createBrowserRouter([
       { path: '/', element: <MatchListPage /> },
       { path: '/match/:id', element: <MatchDetailPage /> },
       { path: '/results', element: <ResultsPage /> },
+      { path: '/teams', element: <TeamsRankingPage /> },
+      { path: '/upsets', element: <UpsetsPage /> },
       { path: '/players', element: <RankingsPage /> },
       { path: '/players/:id', element: <PlayerPage /> },
       { path: '/teams/:id', element: <TeamPage /> },

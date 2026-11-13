@@ -1,0 +1,108 @@
+{
+ "data": {
+  "evaluated": 110,
+  "correct": 72,
+  "accuracy": 0.655,
+  "by_confidence": {
+   "high": {
+    "evaluated": 39,
+    "correct": 28,
+    "accuracy": 0.718
+   },
+   "medium": {
+    "evaluated": 32,
+    "correct": 17,
+    "accuracy": 0.531
+   },
+   "low": {
+    "evaluated": 39,
+    "correct": 27,
+    "accuracy": 0.692
+   }
+  },
+  "by_model": {
+   "elo_xgboost": {
+    "evaluated": 110,
+    "correct": 72,
+    "accuracy": 0.655
+   }
+  },
+  "note": "sample",
+  "by_tier": {
+   "s": {
+    "evaluated": 24,
+    "correct": 13,
+    "accuracy": 0.542
+   },
+   "a": {
+    "evaluated": 9,
+    "correct": 4,
+    "accuracy": 0.444
+   },
+   "c": {
+    "evaluated": 37,
+    "correct": 31,
+    "accuracy": 0.838
+   },
+   "d": {
+    "evaluated": 28,
+    "correct": 18,
+    "accuracy": 0.643
+   }
+  },
+  "log_loss": 0.647,
+  "brier": 0.228,
+  "reliability": [
+   {
+    "bin": "0.5-0.6",
+    "n": 50,
+    "predicted": 0.543,
+    "actual": 0.7
+   },
+   {
+    "bin": "0.6-0.7",
+    "n": 37,
+    "predicted": 0.642,
+    "actual": 0.514
+   },
+   {
+    "bin": "0.7-0.8",
+    "n": 19,
+    "predicted": 0.731,
+    "actual": 0.737
+   },
+   {
+    "bin": "0.8-0.9",
+    "n": 4,
+    "predicted": 0.805,
+    "actual": 1
+   }
+  ],
+  "timeline": [
+   {
+    "date": "2026-10-20",
+    "evaluated": 12,
+    "correct": 8,
+    "accuracy": 0.667
+   },
+   {
+    "date": "2026-10-27",
+    "evaluated": 45,
+    "correct": 28,
+    "accuracy": 0.622
+   },
+   {
+    "date": "2026-11-03",
+    "evaluated": 90,
+    "correct": 58,
+    "accuracy": 0.644
+   },
+   {
+    "date": "2026-11-05",
+    "evaluated": 110,
+    "correct": 72,
+    "accuracy": 0.655
+   }
+  ]
+ }
+}

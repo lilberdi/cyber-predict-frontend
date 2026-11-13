@@ -1,0 +1,514 @@
+{
+ "data": [
+  {
+   "id": 1781,
+   "external_id": "ps-1741372",
+   "source": "pandascore",
+   "status": "finished",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T00:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "a",
+   "team1": {
+    "id": 20,
+    "name": "Legacy",
+    "slug": "legacy-48cb0f61-07e7-4b0d-85a0-5f837e29c807",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/133708/593px_legacy_allmode.png"
+   },
+   "team2": {
+    "id": 8,
+    "name": "FURIA",
+    "slug": "furia",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/124530/8297.png"
+   },
+   "score": {
+    "team1": 2,
+    "team2": 0
+   },
+   "prediction": {
+    "match_id": 1781,
+    "model_name": "elo_xgboost",
+    "model_version": "0.2.0",
+    "p_team1_win": 0.5573223531246185,
+    "p_team2_win": 0.44267764687538147,
+    "confidence": "low",
+    "top_features": [
+     {
+      "name": "elo_diff",
+      "value": 37.97,
+      "impact": "favors_team1",
+      "contribution": 0.243
+     },
+     {
+      "name": "tier",
+      "value": 3,
+      "impact": "favors_team1",
+      "contribution": 0.069
+     },
+     {
+      "name": "form5_diff",
+      "value": -0.2,
+      "impact": "favors_team1",
+      "contribution": 0.061
+     },
+     {
+      "name": "best_of",
+      "value": 3,
+      "impact": "favors_team2",
+      "contribution": -0.032
+     },
+     {
+      "name": "h2h_diff",
+      "value": 0.5,
+      "impact": "favors_team2",
+      "contribution": -0.02
+     }
+    ],
+    "explanation": "Legacy оценивается выше (56% для Legacy). Разница Elo +38, форма (5 матчей) -0.20.",
+    "created_at": "2026-10-16T00:49:03.108203+05:00"
+   },
+   "winner_team_id": 20,
+   "prediction_correct": true
+  },
+  {
+   "id": 1782,
+   "external_id": "ps-1746362",
+   "source": "pandascore",
+   "status": "finished",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T05:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "d",
+   "team1": {
+    "id": 31,
+    "name": "FlyQuest",
+    "slug": "flyquest-cs-go",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/134746/fly_questlogo_square.png"
+   },
+   "team2": {
+    "id": 125,
+    "name": "Off Chops",
+    "slug": "off-chops"
+   },
+   "score": {
+    "team1": 0,
+    "team2": 2
+   },
+   "prediction": {
+    "match_id": 1782,
+    "model_name": "elo_xgboost",
+    "model_version": "0.2.0",
+    "p_team1_win": 0.5,
+    "p_team2_win": 0.5,
+    "confidence": "low",
+    "top_features": [
+     {
+      "name": "elo_diff",
+      "value": 233.435,
+      "impact": "favors_team1",
+      "contribution": 0.551
+     },
+     {
+      "name": "tier",
+      "value": 0,
+      "impact": "favors_team1",
+      "contribution": 0.135
+     },
+     {
+      "name": "form10_diff",
+      "value": 0.4,
+      "impact": "favors_team1",
+      "contribution": 0.115
+     },
+     {
+      "name": "form5_diff",
+      "value": 0.5,
+      "impact": "favors_team2",
+      "contribution": -0.064
+     },
+     {
+      "name": "exp_diff",
+      "value": 46,
+      "impact": "favors_team2",
+      "contribution": -0.053
+     }
+    ],
+    "explanation": "FlyQuest оценивается выше (50% для FlyQuest). Разница Elo +233, форма (5 матчей) +0.50. Мало истории (у менее известной команды 0 матчей) — прогноз приближен к 50%.",
+    "created_at": "2026-10-16T00:49:03.108203+05:00"
+   },
+   "winner_team_id": 125,
+   "prediction_correct": false
+  },
+  {
+   "id": 980010,
+   "external_id": "ps-1741372",
+   "source": "pandascore",
+   "status": "finished",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T00:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "a",
+   "team1": {
+    "id": 20,
+    "name": "Legacy",
+    "slug": "legacy-48cb0f61-07e7-4b0d-85a0-5f837e29c807",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/133708/593px_legacy_allmode.png"
+   },
+   "team2": {
+    "id": 8,
+    "name": "FURIA",
+    "slug": "furia",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/124530/8297.png"
+   },
+   "score": {
+    "team1": null,
+    "team2": null
+   },
+   "prediction": {
+    "match_id": 1781,
+    "model_name": "elo_xgboost",
+    "model_version": "0.2.0",
+    "p_team1_win": 0.5573223531246185,
+    "p_team2_win": 0.44267764687538147,
+    "confidence": "low",
+    "top_features": [
+     {
+      "name": "elo_diff",
+      "value": 37.97,
+      "impact": "favors_team1",
+      "contribution": 0.243
+     },
+     {
+      "name": "tier",
+      "value": 3,
+      "impact": "favors_team1",
+      "contribution": 0.069
+     },
+     {
+      "name": "form5_diff",
+      "value": -0.2,
+      "impact": "favors_team1",
+      "contribution": 0.061
+     },
+     {
+      "name": "best_of",
+      "value": 3,
+      "impact": "favors_team2",
+      "contribution": -0.032
+     },
+     {
+      "name": "h2h_diff",
+      "value": 0.5,
+      "impact": "favors_team2",
+      "contribution": -0.02
+     }
+    ],
+    "explanation": "Legacy оценивается выше (56% для Legacy). Разница Elo +38, форма (5 матчей) -0.20.",
+    "created_at": "2026-10-16T00:49:03.108203+05:00"
+   },
+   "voided_reason": "canceled"
+  },
+  {
+   "id": 980011,
+   "external_id": "ps-1741372",
+   "source": "pandascore",
+   "status": "finished",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T00:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "a",
+   "team1": {
+    "id": 20,
+    "name": "Legacy",
+    "slug": "legacy-48cb0f61-07e7-4b0d-85a0-5f837e29c807",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/133708/593px_legacy_allmode.png"
+   },
+   "team2": {
+    "id": 8,
+    "name": "FURIA",
+    "slug": "furia",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/124530/8297.png"
+   },
+   "score": {
+    "team1": null,
+    "team2": null
+   },
+   "prediction": {
+    "match_id": 1781,
+    "model_name": "elo_xgboost",
+    "model_version": "0.2.0",
+    "p_team1_win": 0.5573223531246185,
+    "p_team2_win": 0.44267764687538147,
+    "confidence": "low",
+    "top_features": [
+     {
+      "name": "elo_diff",
+      "value": 37.97,
+      "impact": "favors_team1",
+      "contribution": 0.243
+     },
+     {
+      "name": "tier",
+      "value": 3,
+      "impact": "favors_team1",
+      "contribution": 0.069
+     },
+     {
+      "name": "form5_diff",
+      "value": -0.2,
+      "impact": "favors_team1",
+      "contribution": 0.061
+     },
+     {
+      "name": "best_of",
+      "value": 3,
+      "impact": "favors_team2",
+      "contribution": -0.032
+     },
+     {
+      "name": "h2h_diff",
+      "value": 0.5,
+      "impact": "favors_team2",
+      "contribution": -0.02
+     }
+    ],
+    "explanation": "Legacy оценивается выше (56% для Legacy). Разница Elo +38, форма (5 матчей) -0.20.",
+    "created_at": "2026-10-16T00:49:03.108203+05:00"
+   },
+   "voided_reason": "forfeit"
+  },
+  {
+   "id": 980012,
+   "external_id": "ps-1741372",
+   "source": "pandascore",
+   "status": "finished",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T00:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "a",
+   "team1": {
+    "id": 20,
+    "name": "Legacy",
+    "slug": "legacy-48cb0f61-07e7-4b0d-85a0-5f837e29c807",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/133708/593px_legacy_allmode.png"
+   },
+   "team2": {
+    "id": 8,
+    "name": "FURIA",
+    "slug": "furia",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/124530/8297.png"
+   },
+   "score": {
+    "team1": null,
+    "team2": null
+   },
+   "prediction": {
+    "match_id": 1781,
+    "model_name": "elo_xgboost",
+    "model_version": "0.2.0",
+    "p_team1_win": 0.5573223531246185,
+    "p_team2_win": 0.44267764687538147,
+    "confidence": "low",
+    "top_features": [
+     {
+      "name": "elo_diff",
+      "value": 37.97,
+      "impact": "favors_team1",
+      "contribution": 0.243
+     },
+     {
+      "name": "tier",
+      "value": 3,
+      "impact": "favors_team1",
+      "contribution": 0.069
+     },
+     {
+      "name": "form5_diff",
+      "value": -0.2,
+      "impact": "favors_team1",
+      "contribution": 0.061
+     },
+     {
+      "name": "best_of",
+      "value": 3,
+      "impact": "favors_team2",
+      "contribution": -0.032
+     },
+     {
+      "name": "h2h_diff",
+      "value": 0.5,
+      "impact": "favors_team2",
+      "contribution": -0.02
+     }
+    ],
+    "explanation": "Legacy оценивается выше (56% для Legacy). Разница Elo +38, форма (5 матчей) -0.20.",
+    "created_at": "2026-10-16T00:49:03.108203+05:00"
+   },
+   "voided_reason": "draw"
+  },
+  {
+   "id": 980020,
+   "external_id": "ps-1741372",
+   "source": "pandascore",
+   "status": "finished",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T00:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "a",
+   "team1": {
+    "id": 20,
+    "name": "Legacy",
+    "slug": "legacy-48cb0f61-07e7-4b0d-85a0-5f837e29c807",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/133708/593px_legacy_allmode.png"
+   },
+   "team2": {
+    "id": 8,
+    "name": "FURIA",
+    "slug": "furia",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/124530/8297.png"
+   },
+   "score": {
+    "team1": 2,
+    "team2": 0
+   },
+   "prediction": {
+    "match_id": 1781,
+    "model_name": "elo_xgboost",
+    "model_version": "0.2.0",
+    "p_team1_win": 0.5573223531246185,
+    "p_team2_win": 0.44267764687538147,
+    "confidence": "low",
+    "top_features": [
+     {
+      "name": "elo_diff",
+      "value": 37.97,
+      "impact": "favors_team1",
+      "contribution": 0.243
+     },
+     {
+      "name": "tier",
+      "value": 3,
+      "impact": "favors_team1",
+      "contribution": 0.069
+     },
+     {
+      "name": "form5_diff",
+      "value": -0.2,
+      "impact": "favors_team1",
+      "contribution": 0.061
+     },
+     {
+      "name": "best_of",
+      "value": 3,
+      "impact": "favors_team2",
+      "contribution": -0.032
+     },
+     {
+      "name": "h2h_diff",
+      "value": 0.5,
+      "impact": "favors_team2",
+      "contribution": -0.02
+     }
+    ],
+    "explanation": "Legacy оценивается выше (56% для Legacy). Разница Elo +38, форма (5 матчей) -0.20.",
+    "created_at": "2026-10-16T00:49:03.108203+05:00"
+   },
+   "winner_team_id": 20
+  },
+  {
+   "id": 980021,
+   "external_id": "ps-1741372",
+   "source": "pandascore",
+   "status": "running",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T00:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "a",
+   "team1": {
+    "id": 20,
+    "name": "Legacy",
+    "slug": "legacy-48cb0f61-07e7-4b0d-85a0-5f837e29c807",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/133708/593px_legacy_allmode.png"
+   },
+   "team2": {
+    "id": 8,
+    "name": "FURIA",
+    "slug": "furia",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/124530/8297.png"
+   },
+   "score": {
+    "team1": null,
+    "team2": null
+   },
+   "prediction": {
+    "match_id": 1781,
+    "model_name": "elo_xgboost",
+    "model_version": "0.2.0",
+    "p_team1_win": 0.5573223531246185,
+    "p_team2_win": 0.44267764687538147,
+    "confidence": "low",
+    "top_features": [
+     {
+      "name": "elo_diff",
+      "value": 37.97,
+      "impact": "favors_team1",
+      "contribution": 0.243
+     },
+     {
+      "name": "tier",
+      "value": 3,
+      "impact": "favors_team1",
+      "contribution": 0.069
+     },
+     {
+      "name": "form5_diff",
+      "value": -0.2,
+      "impact": "favors_team1",
+      "contribution": 0.061
+     },
+     {
+      "name": "best_of",
+      "value": 3,
+      "impact": "favors_team2",
+      "contribution": -0.032
+     },
+     {
+      "name": "h2h_diff",
+      "value": 0.5,
+      "impact": "favors_team2",
+      "contribution": -0.02
+     }
+    ],
+    "explanation": "Legacy оценивается выше (56% для Legacy). Разница Elo +38, форма (5 матчей) -0.20.",
+    "created_at": "2026-10-16T00:49:03.108203+05:00"
+   }
+  },
+  {
+   "id": 980022,
+   "external_id": "ps-1741372",
+   "source": "pandascore",
+   "status": "finished",
+   "best_of": 3,
+   "scheduled_at": "2026-10-16T00:00:00+05:00",
+   "tournament": "Group B",
+   "tournament_tier": "a",
+   "team1": {
+    "id": 20,
+    "name": "Legacy",
+    "slug": "legacy-48cb0f61-07e7-4b0d-85a0-5f837e29c807",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/133708/593px_legacy_allmode.png"
+   },
+   "team2": {
+    "id": 8,
+    "name": "FURIA",
+    "slug": "furia",
+    "image_url": "https://cdn-api.pandascore.co/images/team/image/124530/8297.png"
+   },
+   "score": {
+    "team1": 2,
+    "team2": 0
+   },
+   "winner_team_id": 20
+  }
+ ]
+}

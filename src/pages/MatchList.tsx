@@ -3,6 +3,7 @@ import { Fragment, useDeferredValue, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { LatestTransfers, TopPlayers } from '../components/HomePanels';
 import { MatchRow } from '../components/MatchRow';
+import { RefreshMatches } from '../components/RefreshMatches';
 import { EmptyState, ErrorState, Skeleton, StaleBanner } from '../components/States';
 import { useMatches } from '../data/MatchesContext';
 import { useNow, useResource } from '../hooks';
@@ -82,12 +83,15 @@ export function MatchListPage() {
   }, [filtered, sort, now]);
 
   const hasFilters = Boolean(q || conf || sort !== 'time');
+  // Матчи «зависли»: старт был давно (бэкенд проверяет те, что старше 30 минут), а итога нет.
+  const stale = (data ?? []).some((m) => m.status !== 'finished' && (parseDate(m.scheduled_at)?.getTime() ?? Infinity) < now - 30 * 60_000);
 
   return (
     <>
       <div className="pagehead">
         <h1>Ближайшие матчи CS2</h1>
         <p className="muted">Вероятность победы по оценке модели. Это аналитика, а не ставки.</p>
+        {stale && <RefreshMatches onDone={reload} hint="Есть матчи, которые уже должны были пройти: обновите итоги." />}
       </div>
       <Hero count={data?.length} />
 
