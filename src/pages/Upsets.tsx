@@ -20,14 +20,14 @@ export function UpsetsPage() {
           <>
             <div className="callout">
               Уверенных прогнозов: <b>{data.confident}</b>, из них ошибочных: <b>{data.upsets}</b>
-              {data.confident > 0 && <> ({fmtPercent(data.rate)})</>}. Для честной модели доля ошибок не должна превышать ~25%.
+              {data.confident > 0 && <> ({fmtPercent(data.rate ?? 0)})</>}. Для честной модели доля ошибок не должна превышать ~25%.
               {data.note && <><br /><small className="muted">{data.note}</small></>}
             </div>
-            {!data.items.length ? <EmptyState title="Громких ошибок пока нет" text="Они появятся, когда накопятся сыгранные матчи." /> : (
+            {!data.items?.length ? <EmptyState title="Громких ошибок пока нет" text="Они появятся, когда накопятся сыгранные матчи." /> : (
               <table className="rtable">
                 <thead><tr><th>Матч</th><th>Счёт</th><th className="num">Фаворит</th><th>Дата</th></tr></thead>
                 <tbody>
-                  {data.items.map((m) => {
+                  {data.items!.map((m) => {
                     const fav = m.prediction ? (m.prediction.p_team1_win >= m.prediction.p_team2_win ? m.team1 : m.team2) : undefined;
                     const pf = m.prediction ? Math.max(m.prediction.p_team1_win, m.prediction.p_team2_win) : undefined;
                     return (

@@ -32,9 +32,9 @@ export function TeamsRankingPage() {
                 <tr key={r.team.id}>
                   <td data-label="Место" className="rtable__rank">{r.rank}</td>
                   <td><TeamBadge team={r.team} size={32} /></td>
-                  <td data-label="Elo" className="num">{Math.round(r.elo)}</td>
-                  <td data-label="За 7 дней" className="num">{r.change_7d === null ? '—' : `${r.change_7d > 0 ? '+' : ''}${r.change_7d.toFixed(1)}`}</td>
-                  <td data-label="Форма"><FormStrip form={r.form} /></td>
+                  <td data-label="Elo" className="num">{r.elo == null ? '—' : Math.round(r.elo)}</td>
+                  <td data-label="За 7 дней" className="num">{r.change_7d == null ? '—' : `${r.change_7d > 0 ? '+' : ''}${r.change_7d.toFixed(1)}`}</td>
+                  <td data-label="Форма"><FormStrip form={r.form ?? []} /></td>
                   <td data-label="Матчей" className="num">{r.elo_matches}</td>
                 </tr>
               ))}

@@ -2,7 +2,7 @@ import type { FormResult } from '../types';
 
 /** Последние матчи команды: W/L с подсказкой «соперник, счёт». */
 export function FormStrip({ form }: { form: FormResult[] }) {
-  if (!form.length) return <span className="muted">нет данных</span>;
+  if (!form?.length) return <span className="muted">нет данных</span>;
   return (
     <span className="formstrip" style={{ display: 'inline-flex', gap: 4 }}>
       {form.map((f) => (
